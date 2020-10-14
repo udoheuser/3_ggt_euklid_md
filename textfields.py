@@ -39,12 +39,14 @@ class Test(MDApp):
 
     def build(self):
         self.screen.ids.text_input_1.bind(
-            on_text_validate=self.set_error_message,
-            on_focus=self.do_action,
+            on_text_validate=self.set_error_message
+            # on_focus=self.on_text,
+            # on_text=self.screen.ids.text_input_1.text
         )
         self.screen.ids.text_input_2.bind(
-            on_text_validate=self.set_error_message,
-            on_focus=self.do_action,
+            on_text_validate=self.set_error_message
+            # on_focus=self.on_text
+            # on_text=self.screen.ids.text_input_2.text
         )
         return self.screen
 
@@ -52,7 +54,8 @@ class Test(MDApp):
         self.screen.ids.text_input_1.error = True
         self.screen.ids.text_input_2.error = True
 
-    def do_action(self):
+    def on_text(instance, value):
+        print('The widget', instance, 'have:', value)
         try:
             self.label_results.text = BizLogic.euklid(self.text_input1.text, self.text_input2.text)
         except:
