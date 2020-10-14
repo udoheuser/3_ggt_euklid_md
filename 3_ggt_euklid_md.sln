@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "3_ggt_euklid_md", "3_ggt_euklid_md.pyproj", "{60EE55DD-263A-4AB8-83FC-43B952243361}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60EE55DD-263A-4AB8-83FC-43B952243361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60EE55DD-263A-4AB8-83FC-43B952243361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA4FD008-572C-4043-8EB5-8387F99030C4}
+	EndGlobalSection
+EndGlobal
