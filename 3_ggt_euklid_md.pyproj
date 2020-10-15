@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>3_ggt_euklid_md</Name>
     <RootNamespace>3_ggt_euklid_md</RootNamespace>
-    <InterpreterId>Global|ContinuumAnalytics|Anaconda37-64</InterpreterId>
+    <InterpreterId>CondaEnv|CondaEnv|env_conda_sem3</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="buttons.kv" />
+    <Content Include="requirements.txt" />
     <Content Include="textfields.kv" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
