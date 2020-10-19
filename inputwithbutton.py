@@ -7,7 +7,9 @@ from kivymd.uix.screen import Screen
 from kivymd.uix.button import MDRectangleFlatButton
 from kivymd.uix.label import MDLabel
 from kivy.lang import Builder
+
 import helpers
+from bizLogic import BizLogic
 
 
 class DemoApp(MDApp):
@@ -15,24 +17,30 @@ class DemoApp(MDApp):
         self.theme_cls.primary_palette = "Red"
         screen = Screen()
 
-        # self.title = MDLabel(text='GGT-Berechnung')
+        self.label_title = Builder.load_string(helpers.title_label)
         self.first_number = Builder.load_string(helpers.input_first_number)
         self.second_number = Builder.load_string(helpers.input_second_number)
-        # self.button = Builder.load_string(helpers.button_calculate)
-        button = MDRectangleFlatButton(text='Show',
+        self.label_results = Builder.load_string(helpers.result_label)
+        # button_run = Builder.load_string(helpers.button_calculate)
+        button_run = MDRectangleFlatButton(text='Show',
                                        pos_hint={'center_x': 0.5, 'center_y': 0.6},
                                        on_release=self.show_data)
         
 
-        # screen.add_widget(self.title)
+        screen.add_widget(self.label_title)
         screen.add_widget(self.first_number)
         screen.add_widget(self.second_number)
-        screen.add_widget(button)
+        screen.add_widget(button_run)
+        screen.add_widget(self.label_results)
         return screen
 
     def show_data(self,obj):
-        print(self.first_number.text)
-        print(self.second_number.text)
+        print("DEBUG INFO:\n", self.first_number.text, "\n", self.second_number.text)
+        try:
+            self.label_results.text = BizLogic.euklid(self.first_number.text, self.second_number.text)
+        except:
+            self.label_results.text = "Error. Please use integer values only"
+
 
 
 DemoApp().run()

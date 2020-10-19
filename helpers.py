@@ -1,3 +1,12 @@
+title_label = """
+MDLabel:
+    text: "GGT-Berechnung"
+    font_style: "H4"
+    pos_hint:{'center_x': 0.5, 'center_y': 0.9}
+    size_hint_x: None
+    width:300
+"""
+
 input_first_number = """
 MDTextField:
     hint_text: "Erste Zahl"
@@ -27,4 +36,13 @@ MDRectangleFlatButton:
     text='Run'
     pos_hint={'center_x': 0.5, 'center_y': 0.6}
     on_release=self.show_data
+"""
+
+result_label = """
+MDLabel:
+    text: "(Ergebnis)"
+    font_style: "H6"
+    pos_hint:{'center_x': 0.6, 'center_y': 0.5}
+    size_hint_x: None
+    width:300
 """
