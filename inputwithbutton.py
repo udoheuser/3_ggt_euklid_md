@@ -15,6 +15,7 @@ from bizLogic import BizLogic
 class DemoApp(MDApp):
     def build(self):
         self.theme_cls.primary_palette = "Red"
+        self.theme_cls.secondary_palette = "Grey"
         screen = Screen()
 
         self.label_title = Builder.load_string(helpers.title_label)
@@ -35,12 +36,22 @@ class DemoApp(MDApp):
         return screen
 
     def show_data(self,obj):
-        print("DEBUG INFO:\n", self.first_number.text, "\n", self.second_number.text)
+        print("DEBUG INFO: Inputs:\n", self.first_number.text, "\n", self.second_number.text)
         try:
-            self.label_results.text = BizLogic.euklid(self.first_number.text, self.second_number.text)
+            self.label_results.theme_text_color = "Primary"
+            self.label_results.text = "Ergebnis: "
+            self.label_results.text += BizLogic.euklid(self.first_number.text, self.second_number.text)
+            print("DEBUG INFO: Results\n", self.label_results.text)
         except:
+            self.do_clear()
+            self.label_results.theme_text_color = "Error"
             self.label_results.text = "Error. Please use integer values only"
 
-
+    # Clear input values
+    def do_clear(self):
+        self.first_number.text = "0"
+        self.second_number.text = "0"
+        self.label_results.text = ""
+        # self.label_debug.text = ""
 
 DemoApp().run()
