@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>60ee55dd-263a-4ab8-83fc-43b952243361</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>inputwithbutton.py</StartupFile>
+    <StartupFile>controller.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,7 +24,7 @@
   <ItemGroup>
     <Compile Include="bizLogic.py" />
     <Compile Include="helpers.py" />
-    <Compile Include="inputwithbutton.py" />
+    <Compile Include="controller.py" />
     <Compile Include="unittest_ggt_euklid.py" />
   </ItemGroup>
   <ItemGroup>
