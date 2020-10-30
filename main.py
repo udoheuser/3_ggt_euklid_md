@@ -16,7 +16,9 @@ class DemoApp(MDApp):
     def build(self):
         self.theme_cls.primary_palette = "Red"
         self.theme_cls.secondary_palette = "Grey"
-        screen = Screen()
+
+        # screen = Screen()
+        screen = Builder.load_string(helpers.navigation_bar)
 
         self.label_title = Builder.load_string(helpers.title_label)
         self.first_number = Builder.load_string(helpers.input_first_number)

@@ -46,3 +46,20 @@ MDLabel:
     size_hint_x: None
     width:300
 """
+
+# https://github.com/attreyabhatt/KivyMD-Basics/tree/master/11%20-%20Navigation%20Drawer
+navigation_bar = """
+Screen:
+    NavigationLayout:
+        ScreenManager:
+            Screen:
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: "Navigation"
+                        elevation: 10
+                        left_action_items: [['menu', lambda x: nav_drawer.toggle_nav_drawer()]]
+                    Widget:
+        MDNavigationDrawer:
+            id: nav_drawer
+"""
